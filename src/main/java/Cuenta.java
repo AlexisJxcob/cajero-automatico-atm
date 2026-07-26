@@ -1,10 +1,11 @@
 import java.util.ArrayList;
+import java.util.List;
 
 public class Cuenta {
     private String numeroCuenta;
     private String pin;
     private double saldo;
-    private ArrayList<String> historial = new ArrayList<>();
+    private List<String> historial = new ArrayList<>();
 
     public Cuenta(String numeroCuenta, double saldo, String pin) {
         this.numeroCuenta = numeroCuenta;
@@ -22,8 +23,8 @@ public class Cuenta {
     }
 
     // retirar
-    public double retirar(double retiroCantidad) {
-        return retiroCantidad;
+    public void retirar(double retiroCantidad) {
+        System.out.println("Retiro " + retiroCantidad );
     }
 
     // registrar transaccion en el historial
