@@ -17,18 +17,40 @@ public class Cuenta {
     // para depositar dinero en efectivo
     public void depositar(double ingresoCantidad) {
         if (ingresoCantidad > 0) {
-         this.saldo += ingresoCantidad;
-         registraRetiro("Hizo un deposito de: $" + ingresoCantidad + " y su nuevo saldo actual es de: $" + this.saldo);
+            this.saldo += ingresoCantidad;
+            registraTrasaccion("Hizo un deposito de: $" + ingresoCantidad + " y su nuevo saldo actual es de: $" + this.saldo);
         }
     }
 
     // retirar
-    public void retirar(double retiroCantidad) {
-        System.out.println("Retiro " + retiroCantidad );
+    public boolean retirar(double retiroCantidad) {
+        if (retiroCantidad > 0 && retiroCantidad <= this.saldo) {
+            this.saldo -= retiroCantidad;
+            registraTrasaccion("Haz retirado la cantidad de: $" + retiroCantidad);
+            return true;
+        }
+        return false;
     }
 
     // registrar transaccion en el historial
-    public void registraRetiro(String mensaje) {
-    historial.add(mensaje);
+    public void registraTrasaccion(String mensaje) {
+        historial.add(mensaje);
+    }
+
+    // para que el cajero consulte
+    public double getSaldo() {
+        return saldo;
+    }
+
+    public boolean verificarPin(String pinIngresado) {
+
+        if (this.pin.equals(pinIngresado)) {
+            System.out.println("Bienvenido");
+            this.pin.equals(pinIngresado);
+            return true;
+        }
+        System.out.println("Error pin invalido");
+        return false;
     }
 }
+
