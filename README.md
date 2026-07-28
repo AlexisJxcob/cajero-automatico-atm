@@ -28,23 +28,23 @@ El sistema debe resolver los siguientes problemas del mundo real:
 Puedes seguir este orden de desarrollo para construir el proyecto desde cero:
 
 ### 🧩 Fase 1: El Modelo del Cliente (`Cuenta.java`)
-  * [ ] **Definir propiedades privadas:** Crear atributos para `numeroCuenta` (String), `pin` (String), `saldo` (double) y un `ArrayList<String>` para el historial.
-  * [ ] **Configurar el Constructor:** Permitir la creación de cuentas pasando el número, el PIN y un saldo inicial.
-  * [ ] **Métodos de negocio internos:**
-  * [ ] Crear el método `bool verificarPin(String pinIngresado)`.
-  * [ ] Crear el método `void depositar(double cantidad)`.
-  * [ ] Crear el método `boolean retirar(double cantidad)` (debe retornar `true` si la operación fue exitosa o `false` si no había fondos suficientes).
-  * [ ] Crear el método `void registrarMovimiento(String descripcion)`.
+  * [x] **Definir propiedades privadas:** Crear atributos para `numeroCuenta` (String), `pin` (String), `saldo` (double) y un `ArrayList<String>` para el historial.
+  * [x] **Configurar el Constructor:** Permitir la creación de cuentas pasando el número, el PIN y un saldo inicial.
+  * [x] **Métodos de negocio internos:**
+  * [x] Crear el método `bool verificarPin(String pinIngresado)`.
+  * [x] Crear el método `void depositar(double cantidad)`.
+  * [x] Crear el método `boolean retirar(double cantidad)` (debe retornar `true` si la operación fue exitosa o `false` si no había fondos suficientes).
+  * [x] Crear el método `void registrarMovimiento(String descripcion)`.
 
 ### 🧠 Fase 2: El Cerebro del Cajero (`Cajero.java`)
-  * [ ] **Estructura del Banco:** Crear una clase con una lista `ArrayList<Cuenta>` para pre-cargar clientes de prueba en un método inicializador.
-  * [ ] **Lógica de login:** Programar el método `Cuenta buscarYAutenticar(String numero, String pin)` que recorra la lista de cuentas, valide las credenciales y devuelva el objeto `Cuenta` activo.
+  * [x] **Estructura del Banco:** Crear una clase con una lista `ArrayList<Cuenta>` para pre-cargar clientes de prueba en un método inicializador.
+  * [x] **Lógica de login:** Programar el método `Cuenta buscarYAutenticar(String numero, String pin)` que recorra la lista de cuentas, valide las credenciales y devuelva el objeto `Cuenta` activo.
 
 ### 📱 Fase 3: Flujo Interactivo y Menú de Usuario (`Main.java`)
-  * [ ] **Pantalla de Bienvenida:** Solicitar las credenciales del usuario usando `Scanner`.
-  * [ ] **Bucle de Sesión Activa:** Si el login es exitoso, abrir un ciclo `while` interactivo que ofrezca las opciones financieras:
-  * [ ] **1. Consultar Saldo:** Mostrar de forma limpia el dinero disponible de la cuenta logueada.
-  * [ ] **2. Depositar Fondos:** Solicitar monto, procesar y guardar la confirmación en el historial.
-  * [ ] **3. Retirar Efectivo:** Solicitar monto, validar saldo y emitir billetes (o mostrar mensaje de fondos insuficientes).
-  * [ ] **4. Ver Historial:** Recorrer e imprimir la lista de movimientos registrados en la sesión.
-  * [ ] **5. Cerrar Sesión:** Romper el bucle actual y regresar a la pantalla de login para permitir que otro usuario ingrese.
+  * [x] **Pantalla de Bienvenida:** Solicitar las credenciales del usuario usando `Scanner`.
+  * [x] **Bucle de Sesión Activa:** Si el login es exitoso, abrir un ciclo `while` interactivo que ofrezca las opciones financieras:
+  * [x] **1. Consultar Saldo:** Mostrar de forma limpia el dinero disponible de la cuenta logueada.
+  * [x] **2. Depositar Fondos:** Solicitar monto, procesar y guardar la confirmación en el historial.
+  * [x] **3. Retirar Efectivo:** Solicitar monto, validar saldo y emitir billetes (o mostrar mensaje de fondos insuficientes).
+  * [x] **4. Ver Historial:** Recorrer e imprimir la lista de movimientos registrados en la sesión.
+  * [x] **5. Cerrar Sesión:** Romper el bucle actual y regresar a la pantalla de login para permitir que otro usuario ingrese.
