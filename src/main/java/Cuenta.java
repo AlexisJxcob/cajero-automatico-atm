@@ -42,15 +42,16 @@ public class Cuenta {
         return saldo;
     }
 
-    public boolean verificarPin(String pinIngresado) {
+    public String getNumeroCuenta() {
+        return numeroCuenta;
+    }
 
-        if (this.pin.equals(pinIngresado)) {
-            System.out.println("Bienvenido");
-            this.pin.equals(pinIngresado);
-            return true;
-        }
-        System.out.println("Error pin invalido");
-        return false;
+    public List<String> getHistorial() {
+        return historial;
+    }
+
+    public boolean verificarPin(String pinIngresado) {
+        return this.pin.equals(pinIngresado);
     }
 }
 
